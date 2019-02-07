@@ -1,0 +1,24 @@
+{
+  "name": "product-customizer",
+  "version": "1.0.0",
+  "description": "A product customizer using React.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kheeya7/product-customizer.git"
+  },
+  "keywords": [
+    "product",
+    "customizer",
+    "react"
+  ],
+  "author": "Kate Sohng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kheeya7/product-customizer/issues"
+  },
+  "homepage": "https://github.com/kheeya7/product-customizer#readme"
+}
