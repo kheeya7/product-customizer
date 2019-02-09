@@ -8,7 +8,7 @@
         });
     }
 
-    function ProductCusmomizer(props) {
+    function ProductCustomizer(props) {
         return React.createElement(
             "div",
             { className: "customizer" },
@@ -16,5 +16,5 @@
         );
     }
 
-    ReactDOM.render(React.createElement(ProductCusmomizer), document.getElementById("react-root"))
+    ReactDOM.render(React.createElement(ProductCustomizer), document.getElementById("react-root"))
 })();
