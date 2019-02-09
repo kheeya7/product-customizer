@@ -4,7 +4,7 @@
     function ProductImage(props) {
         return React.createElement("img", {
             src: "../assets/red.jpg",
-            alt: "Product image"
+            alt: "Product red image"
         });
     }
 
