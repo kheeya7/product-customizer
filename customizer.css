@@ -23,6 +23,11 @@
 .select-group label {
     font-size: 85%;
     margin-right: 0.5em;
+    font-weight: 700;   
+}
+
+.select-group select {
+    text-transform: capitalize;
 }
 
 /* Media Queries
