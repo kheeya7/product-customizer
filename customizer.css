@@ -21,13 +21,16 @@
 }
 
 .select-group label {
-    font-size: 85%;
     margin-right: 0.5em;
     font-weight: 700;   
 }
 
 .select-group select {
     text-transform: capitalize;
+}
+
+.select-group select#color-options {
+    min-width: 61px;
 }
 
 /* Media Queries

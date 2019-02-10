@@ -12,7 +12,7 @@ window.Inventory = {
 
     bySize: {
         "0": [
-            "red", "blue"
+            "red", "blue", "yellow"
         ],
         "1": [
             "red", "blue"
@@ -21,7 +21,7 @@ window.Inventory = {
             "red", "brown", "yellow", "purple", "blue"
         ],
         "3": [
-            "red", "blue"
+            "red", "blue", "yellow"
         ],
         "4": [
             "brown", "yellow", "purple"
@@ -44,7 +44,7 @@ window.Inventory = {
         "red": ["0", "1", "2", "3"],
         "blue": ["0", "1", "2", "3"],
         "brown": ["2", "4", "5", "6", "7", "8"],
-        "purple": ["4", "5", "6", "7", "8"],
-        "yellow": ["2", "4", "5", "6", "7", "8"]
+        "purple": ["2", "4", "5", "6", "7", "8"],
+        "yellow": ["0", "2", "3", "4", "5", "6", "7", "8"]
     }
 };
