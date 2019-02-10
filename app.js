@@ -9,14 +9,27 @@
         function sizeOptions() {
             return props.sizes.map(function (num) {
                 return (
-                    <option value={num} key={num}>{num}</option>
+                    <option
+                        value={num}
+                        key={num}>
+                        {num}
+                    </option>
                 );
             });
         }
+
+        function onSizeChange(evt) {
+            props.handleSizeChange(evt.target.value);
+        }
+
         return (
             <div className="select-group">
                 <label htmlFor="size-options">Size: </label>
-                <select defaultValue={props.size} name="sizeOptions" id="size-options">
+                <select
+                    defaultValue={props.size}
+                    onChange={onSizeChange}
+                    name="sizeOptions"
+                    id="size-options">
                     {sizeOptions()}
                 </select>
             </div>
@@ -27,14 +40,27 @@
         function colorOptions() {
             return props.colors.map(function (name) {
                 return (
-                    <option value={name} key={name}>{name}</option>
+                    <option
+                        value={name}
+                        key={name}>
+                        {name}
+                    </option>
                 );
             });
         }
+
+        function onColorChange(evt) {
+            props.handleColorChange(evt.target.value);
+        }
+
         return (
             <div className="select-group">
                 <label htmlFor="color-options">Color: </label>
-                <select defaultValue={props.color} name="colorOptions" id="color-options">
+                <select
+                    defaultValue={props.color}
+                    onChange={onColorChange}
+                    name="colorOptions"
+                    id="color-options">
                     {colorOptions()}
                 </select>
             </div>
@@ -53,6 +79,31 @@
                 colors: colors
             };
         },
+
+        handleSizeChange: function (selectedSize) {
+            var availableColors = window.Inventory.bySize[selectedSize]
+
+            this.setState({
+                colors: availableColors
+            });
+
+            if (availableColors.indexOf(this.state.color) === -1) {
+                this.setState({ color: availableColors[0] })
+            }
+        },
+
+        handleColorChange: function (selectedColor) {
+            var availableSizes = window.Inventory.byColor[selectedColor]
+
+            this.setState({
+                sizes: availableSizes
+            });
+
+            if (availableSizes.indexOf(this.state.size) === -1) {
+                this.setState({ size: availableSizes[0] })
+            }
+        },
+
         render: function () {
             return (
                 <div className="customizer">
@@ -63,16 +114,17 @@
                         <SizeSelector
                             size={this.state.size}
                             sizes={this.state.sizes}
+                            handleSizeChange={this.handleSizeChange}
                         />
                         <ColorSelector
                             color={this.state.color}
                             colors={this.state.colors}
+                            handleColorChange={this.handleColorChange}
                         />
                     </div>
                 </div>
             )
         }
-
     });
 
     ReactDOM.render(<ProductCustomizer />, document.getElementById("react-root"))
