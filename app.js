@@ -23,14 +23,34 @@
         )
     }
 
+    function ColorSelector(props) {
+        function colorOptions() {
+            return props.colors.map(function (name) {
+                return (
+                    <option value={name} key={name}>{name}</option>
+                );
+            });
+        }
+        return (
+            <div className="select-group">
+                <label htmlFor="color-options">Color: </label>
+                <select defaultValue={props.color} name="colorOptions" id="color-options">
+                    {colorOptions()}
+                </select>
+            </div>
+        )
+    }
+
     var ProductCustomizer = createReactClass({
         getInitialState: function () {
-            var sizes = window.Inventory.allSizes;
+            var sizes = window.Inventory.allSizes,
+                colors = window.Inventory.allColors;
 
             return {
-                color: "blue",
                 size: 4,
-                sizes: sizes
+                sizes: sizes,
+                color: "blue",
+                colors: colors
             };
         },
         render: function () {
@@ -43,6 +63,10 @@
                         <SizeSelector
                             size={this.state.size}
                             sizes={this.state.sizes}
+                        />
+                        <ColorSelector
+                            color={this.state.color}
+                            colors={this.state.colors}
                         />
                     </div>
                 </div>
