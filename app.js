@@ -96,7 +96,8 @@
             var availableSizes = window.Inventory.byColor[selectedColor]
 
             this.setState({
-                sizes: availableSizes
+                sizes: availableSizes,
+                color: selectedColor
             });
 
             if (availableSizes.indexOf(this.state.size) === -1) {
