@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/kheeya7/product-customizer/issues"
   },
-  "homepage": "https://github.com/kheeya7/product-customizer#readme"
+  "homepage": "https://github.com/kheeya7/product-customizer#readme",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1"
+  }
 }

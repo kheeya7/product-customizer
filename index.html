@@ -12,9 +12,42 @@
 </head>
 
 <body>
-    Welcome to Lalafolks!
-    <!-- React components go here -->
-    <div id="react-root"></div>
+    <div class="header">
+        <div class="header-inner">
+            <a class="logo" href="/index.html" title="Lalafolks - Lalafell's Rain Gear" rel="home">
+                <img src="/assets/logo.png" alt="Lalafolks logo">
+            </a>
+            <ul class="main-nav">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/index.html">Company</a></li>
+                <li><a href="/index.html">Product</a></li>
+                <li class="current-menu"><a href="/index.html">Shop</a></li>
+                <li><a href="/index.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="post">
+            <div class="content-inner">
+                <section class="main-content">
+                    <div class="item">
+                        <h2>
+                            Lafolks Raincoat
+                        </h2>
+                        <p>
+                            Premium quality, built to last.
+                        </p>
+                        <!-- React components go here -->
+                        <div id="react-root"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+
+
+    </div>
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script>window.React || document.write('<script src="../../../node_modules/react/umd/react.development.js"><\/script>')</script>
@@ -27,6 +60,7 @@
 
     <script src="./inventory.js"></script>
     <script src="./app.js" type="text/babel"></script>
+
 </body>
 
 </html>
