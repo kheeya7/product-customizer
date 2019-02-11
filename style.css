@@ -7,6 +7,7 @@ body {
     background: #fff;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, p, img, big, small, li, ol, ul, label, form, button, table, caption, tr, th, td {
@@ -14,5 +15,112 @@ h1, h2, h3, p, img, big, small, li, ol, ul, label, form, button, table, caption,
     padding: 0;
     line-height: 1;
     text-align: left;
+}
+
+a {
+    text-decoration: none;
+    outline: none;    
+}
+
+/* Header Styles
+------------------------------------*/
+.header {
+    border-top: 4px solid #fac769;
+    border-bottom: 1px solid #ddd;
+    padding: 40px 0;
+}
+
+.header-inner {
+    position: relative;
+    width: 1300px;
+    max-width: 84%;
+    height: 42px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -30px;
+}
+
+.logo img {
+    display: block;
+    height: 80px;
+    width: auto;
+}
+
+.main-nav {
+    margin-top: 2px;
+    float: right;
+    list-style: none;
+}
+
+.main-nav li {
+    float: left;
+    margin: 0 10px 0 0 ;
+    position: relative;
+}
+
+.main-nav a {
+    display: block;
+    padding: 13px 15px;
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #444444;
+}
+
+.main-nav .current-menu a{
+    border-radius: 3px;
+    color: #fff;
+    background-color: #fac769;
+}
+
+/* Main Styles
+------------------------------------*/
+.post {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.content-inner {
+    width: 1300px;
+    max-width: 84%;
+    margin: 0 auto;
+    font-family: 'Crimson Text', 'Times New Roman', serif;
+    font-size:1.25em;
+}
+
+.main-content {
+    padding-top: 1.5em;
+}
+
+.content h2 {
+    margin: 0 0 0.5em;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 120%;
+}
+
+.content p {
+    line-height: 160%;
+    margin-bottom: 1.3em;
+}
+
+/* Footer
+------------------------------------*/
+
+/* Media Queries
+------------------------------------*/
+@media (min-width: 440px){
+    .item {
+        display: inline-block;
+        width: 100%;
+        margin: 1em 2.2%;
+        vertical-align: top;
+    }
 }
 
