@@ -2,7 +2,7 @@
     "use strict";
 
     function ProductImage(props) {
-        return <img src={`../assets/${props.color}.jpg`} alt="Product image" />
+        return <img src={`../assets/${props.color}.png`} alt="Product image" />
     }
 
     function SizeSelector(props) {
